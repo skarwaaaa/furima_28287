@@ -22,3 +22,33 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+# テーブル設計
+
+## users テーブル
+
+| Colum           | Type     | options      |
+|-----------------|----------|--------------|
+| nickname        | string   | null false   |
+| email           | string   | null false   |
+| password        | string   | null false   |
+| familyname      | string   | null false   |
+| firstname       | string   | null false   |
+| familyname_kana | string   | null false   |
+| firstname_kana  | string   | null false   |
+| birthday        | datetime | null false   |
+
+### Association
+- has_many :items
+
+## items テーブル
+
+| Colum       | Type    | options      |
+|-------------|---------|--------------|
+| name        | string  | null false   |
+| description | text    | null false   |
+| image       | string  | null false   |
+| price       | integer | null false   |
+| user_id     | integer | null false  foreign_key: true |
+
+## Association
+- belongs_to :user
