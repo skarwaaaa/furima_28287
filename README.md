@@ -29,7 +29,7 @@ Things you may want to cover:
 | Colum           | Type     | options      |
 |-----------------|----------|--------------|
 | nickname        | string   | null false   |
-| email           | string   | null false   |
+| email           | string   | null false default: "" |
 | password        | string   | null false   |
 | familyname      | string   | null false   |
 | firstname       | string   | null false   |
@@ -42,13 +42,44 @@ Things you may want to cover:
 
 ## items テーブル
 
-| Colum       | Type    | options      |
-|-------------|---------|--------------|
-| name        | string  | null false   |
-| description | text    | null false   |
-| image       | string  | null false   |
-| price       | integer | null false   |
-| user_id     | integer | null false  foreign_key: true |
+| Colum         | Type    | options       |
+|---------------|---------|---------------|
+| name          | string  | null false    |
+| description   | text    | null false    |
+| image         | string  | null false    |
+| price         | integer | null false    |
+| user_id       | integer | null false  foreign_key: true |
+| category      | string  | null false    |
+| status        | string   | null false   |
+| delivery_fee  | string   | null false   |
+| consignor     | integer  | null false   |
+| shipping_date | string   | null false   |
 
 ## Association
 - belongs_to :user
+
+## addressese テーブル
+
+| Colum           | Type     | options      |
+|-----------------|----------|--------------|
+| postal_number   | integer  | null false   |
+| prefecture      | string   | null false   |
+| city            | string   | null false   |
+| brock_number    | string   | null false   |
+| building_name   | string   |              |
+| phone_number    | integer  | null false   |
+| user_id         | integer  | null false  foreign_key: true |
+
+## Association
+-belongs_to :user
+
+## cards テーブル
+
+| Colum     | Type    | options    |
+|-----------|---------|------------|
+| user_id   | integer | null false |
+| item_id   | integer | null false |
+| card_id   | integer | null false |
+
+## Association
+-has_one :user
