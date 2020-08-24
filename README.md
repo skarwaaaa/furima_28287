@@ -31,14 +31,16 @@ Things you may want to cover:
 | nickname        | string   | null false   |
 | email           | string   | null false default: "" |
 | password        | string   | null false   |
-| familyname      | string   | null false   |
+| lastname        | string   | null false   |
 | firstname       | string   | null false   |
-| familyname_kana | string   | null false   |
+| lastname_kana   | string   | null false   |
 | firstname_kana  | string   | null false   |
 | birthday        | datetime | null false   |
 
 ### Association
 - has_many :items
+- has_one :addresses
+- has_one :card
 
 ## items テーブル
 
@@ -83,3 +85,4 @@ Things you may want to cover:
 
 ## Association
 -has_one :user
+
