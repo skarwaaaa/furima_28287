@@ -1,9 +1,8 @@
-class CreateCards < ActiveRecord::Migration[6.0]
+class CreatePurchases < ActiveRecord::Migration[6.0]
   def change
-    create_table :cards do |t|
+    create_table :purchases do |t|
       t.integer :user_id,null: false
       t.integer :item_id,null: false
-      t.integer :card_id,null: false
       t.timestamps
     end
   end

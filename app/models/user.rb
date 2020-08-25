@@ -5,8 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :item
-  has_one :addresses
-  has_one :cards
+  has_one :address
+  has_one :purchase
 
     # validates presence: true
   end

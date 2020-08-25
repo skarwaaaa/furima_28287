@@ -1,3 +1,4 @@
 class Address < ApplicationRecord
-  has_one :users
+  belongs_to :user
+  has_one_ :purchase
 end

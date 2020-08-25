@@ -36,54 +36,55 @@ Things you may want to cover:
 | firstname       | string   | null false   |
 | lastname_kana   | string   | null false   |
 | firstname_kana  | string   | null false   |
-| birthday        | datetime | null false   |
+| birthday        | date     | null false   |
 
 ### Association
 - has_many :items
 - has_one :addresses
-- has_one :card
+- has_one :purchase
 
 ## items テーブル
 
-| Colum         | Type    | options       |
-|---------------|---------|---------------|
-| name          | string  | null false    |
-| description   | text    | null false    |
-| image         | string  | null false    |
-| price         | integer | null false    |
-| user_id       | integer | null false  foreign_key: true |
-| category      | string  | null false    |
-| status        | string   | null false   |
-| delivery_fee  | string   | null false   |
-| consignor     | integer  | null false   |
-| shipping_date | string   | null false   |
+| Colum            | Type    | options       |
+|------------------|---------|---------------|
+| name             | string  | null false    |
+| description      | text    | null false    |
+| image            | string  | null false    |
+| price            | integer | null false    |
+| user_id          | integer | null false    |
+| category_id      | string  | null false    |
+| status_id        | string   | null false   |
+| delivery_fee_id  | string   | null false   |
+| prefecture_id    | integer  | null false   |
+| shipping_date_id | string   | null false   |
 
 ## Association
 - belongs_to :user
+- has_one :purchase
 
 ## addressese テーブル
 
 | Colum           | Type     | options      |
 |-----------------|----------|--------------|
 | postal_number   | integer  | null false   |
-| prefecture      | string   | null false   |
+| prefecture_id   | string   | null false   |
 | city            | string   | null false   |
 | brock_number    | string   | null false   |
 | building_name   | string   |              |
 | phone_number    | integer  | null false   |
-| user_id         | integer  | null false  foreign_key: true |
+| purchase_id     | integer  | null false   |
 
 ## Association
--belongs_to :user
+- belongs_to :user
+- has_one_ :purchase
 
-## cards テーブル
+## purchases テーブル
 
 | Colum     | Type    | options    |
 |-----------|---------|------------|
 | user_id   | integer | null false |
 | item_id   | integer | null false |
-| card_id   | integer | null false |
 
 ## Association
--has_one :user
-
+- has_one :user
+- has_one :item
