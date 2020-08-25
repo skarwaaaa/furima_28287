@@ -40,7 +40,7 @@ Things you may want to cover:
 
 ### Association
 - has_many :items
-- has_one :addresses
+- has_one :address
 - has_one :purchase
 
 ## items テーブル
@@ -76,7 +76,7 @@ Things you may want to cover:
 
 ## Association
 - belongs_to :user
-- has_one_ :purchase
+- has_one :purchase
 
 ## purchases テーブル
 
@@ -86,6 +86,6 @@ Things you may want to cover:
 | item_id   | integer | null false |
 
 ## Association
-- has_one :user
-- has_one :item
-- has_one :addressese
+- belong_to :user
+- belong_to :item
+- belong_to :addressese
