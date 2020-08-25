@@ -65,7 +65,7 @@ Things you may want to cover:
 
 | Colum           | Type     | options      |
 |-----------------|----------|--------------|
-| postal_number   | integer  | null false   |
+| postal_number   | string   | null false   |
 | prefecture      | string   | null false   |
 | city            | string   | null false   |
 | brock_number    | string   | null false   |
