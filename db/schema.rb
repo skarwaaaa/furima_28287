@@ -51,10 +51,10 @@ ActiveRecord::Schema.define(version: 2020_08_21_083039) do
     t.string "nickname", null: false
     t.string "email", default: "", null: false
     t.string "encrypted_password", null: false
-    t.string "famiryname", null: false
     t.string "firstname", null: false
-    t.string "famiryname_kana", null: false
+    t.string "lastname", null: false
     t.string "firstname_kana", null: false
+    t.string "lastname_kana", null: false
     t.datetime "birthday", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
