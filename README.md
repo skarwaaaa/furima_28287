@@ -70,7 +70,7 @@ Things you may want to cover:
 | city            | string   | null false   |
 | brock_number    | string   | null false   |
 | building_name   | string   |              |
-| phone_number    | integer  | null false   |
+| phone_number    | string   | null false   |
 | purchase_id     | integer  | null false   |
 
 ## Association
