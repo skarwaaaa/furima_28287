@@ -52,11 +52,11 @@ Things you may want to cover:
 | image            | string  | null false    |
 | price            | integer | null false    |
 | user_id          | integer | null false    |
-| category_id      | string  | null false    |
-| status_id        | string   | null false   |
-| delivery_fee_id  | string   | null false   |
+| category_id      | integer | null false    |
+| status_id        | integer  | null false   |
+| delivery_fee_id  | integer  | null false   |
 | prefecture_id    | integer  | null false   |
-| shipping_date_id | string   | null false   |
+| shipping_date_id | integer  | null false   |
 
 ## Association
 - belongs_to :user
@@ -66,12 +66,12 @@ Things you may want to cover:
 
 | Colum           | Type     | options      |
 |-----------------|----------|--------------|
-| postal_number   | integer  | null false   |
-| prefecture_id   | string   | null false   |
+| postal_number   | string   | null false   |
+| prefecture      | string   | null false   |
 | city            | string   | null false   |
 | brock_number    | string   | null false   |
 | building_name   | string   |              |
-| phone_number    | integer  | null false   |
+| phone_number    | string   | null false   |
 | purchase_id     | integer  | null false   |
 
 ## Association
