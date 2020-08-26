@@ -45,14 +45,14 @@ Things you may want to cover:
 
 ## items テーブル
 
-| Colum            | Type    | options       |
-|------------------|---------|---------------|
-| name             | string  | null false    |
-| description      | text    | null false    |
-| image            | string  | null false    |
-| price            | integer | null false    |
-| user_id          | integer | null false    |
-| category_id      | integer | null false    |
+| Colum            | Type     | options      |
+|------------------|----------|--------------|
+| name             | string   | null false   |
+| description      | text     | null false   |
+| image            | string   | null false   |
+| price            | integer  | null false   |
+| user_id          | integer  | null false   |
+| category_id      | integer  | null false   |
 | status_id        | integer  | null false   |
 | delivery_fee_id  | integer  | null false   |
 | prefecture_id    | integer  | null false   |
@@ -62,7 +62,7 @@ Things you may want to cover:
 - belongs_to :user
 - has_one :purchase
 
-## addressese テーブル
+## addresses テーブル
 
 | Colum           | Type     | options      |
 |-----------------|----------|--------------|
@@ -86,6 +86,6 @@ Things you may want to cover:
 | item_id   | integer | null false |
 
 ## Association
-- belong_to :user
-- belong_to :item
-- belong_to :addressese
+- belongs_to :user
+- belongs_to :item
+- has_one :address
