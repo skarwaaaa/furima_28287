@@ -40,7 +40,7 @@ Things you may want to cover:
 
 ### Association
 - has_many :items
-- has_many :purchase
+- has_many :purchases
 
 ## items テーブル
 
@@ -66,7 +66,7 @@ Things you may want to cover:
 | Colum           | Type     | options                      |
 |-----------------|----------|------------------------------|
 | postal_number   | string   | null false                   |
-| prefecture      | string   | null false                   |
+| prefecture_id   | integer  | null false                   |
 | city            | string   | null false                   |
 | brock_number    | string   | null false                   |
 | building_name   | string   |                              |
