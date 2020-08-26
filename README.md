@@ -74,7 +74,7 @@ Things you may want to cover:
 | purchase_id     | integer  | null false foreign_key: true |
 
 ## Association
-- has_one :purchase
+- belongs_to :purchases
 
 ## purchases テーブル
 
