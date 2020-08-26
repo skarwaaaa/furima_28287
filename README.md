@@ -40,8 +40,7 @@ Things you may want to cover:
 
 ### Association
 - has_many :items
-- has_one :address
-- has_one :purchase
+- has_many :purchase
 
 ## items テーブル
 
@@ -51,7 +50,7 @@ Things you may want to cover:
 | description      | text     | null false   |
 | image            | string   | null false   |
 | price            | integer  | null false   |
-| user_id          | integer  | null false   |
+| user_id          | integer  | null false foreign_key: true  |
 | category_id      | integer  | null false   |
 | status_id        | integer  | null false   |
 | delivery_fee_id  | integer  | null false   |
@@ -64,26 +63,25 @@ Things you may want to cover:
 
 ## addresses テーブル
 
-| Colum           | Type     | options      |
-|-----------------|----------|--------------|
-| postal_number   | string   | null false   |
-| prefecture      | string   | null false   |
-| city            | string   | null false   |
-| brock_number    | string   | null false   |
-| building_name   | string   |              |
-| phone_number    | string   | null false   |
-| purchase_id     | integer  | null false   |
+| Colum           | Type     | options                      |
+|-----------------|----------|------------------------------|
+| postal_number   | string   | null false                   |
+| prefecture      | string   | null false                   |
+| city            | string   | null false                   |
+| brock_number    | string   | null false                   |
+| building_name   | string   |                              |
+| phone_number    | string   | null false                   |
+| purchase_id     | integer  | null false foreign_key: true |
 
 ## Association
-- belongs_to :user
-- has_one :purchase
+- belongs_to :purchase
 
 ## purchases テーブル
 
-| Colum     | Type    | options    |
-|-----------|---------|------------|
-| user_id   | integer | null false |
-| item_id   | integer | null false |
+| Colum     | Type    | options                      |
+|-----------|---------|------------------------------|
+| user_id   | integer | null false foreign_key: true |
+| item_id   | integer | null false foreign_key: true |
 
 ## Association
 - belongs_to :user
