@@ -5,11 +5,11 @@ class UsersController < ApplicationController
   end
 
   def new
-    # current_user.new(user_params)
-    # if current_user.new(user_params)
-    #   redirect_to root_path
-    # else
-    #   render :new
+    current_user.new(user_params)
+    if current_user.new(user_params)
+      redirect_to root_path
+    else
+      render :new
   end
 
 
