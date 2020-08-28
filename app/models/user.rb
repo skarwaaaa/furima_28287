@@ -10,7 +10,7 @@ class User < ApplicationRecord
   VALID_PASSWORD_REGEX = /\A(?=.*?[a-zA-Z])(?=.*?\d)[a-zA-Z\d!@#\$%\^\&*\)\(+=._-]{7,255}\z/i
   VALID_KATAKANA_REGEX = /\A[\p{katakana}\p{blank}ー－]+\z/
   VALID_ZENKAKU_REGEX = /\A[ぁ-んァ-ン一-龥]+\z/
-  
+
   with_options presence: true do
     validates :nickname
     validates :email, uniqueness: true, format: { with: /@/, message: '@を使用してください'}

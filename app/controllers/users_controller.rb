@@ -12,7 +12,6 @@ class UsersController < ApplicationController
       render :new
   end
 
-
   def create
     @user = User.create(user_params)
     if @user.save
