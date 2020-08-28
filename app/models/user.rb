@@ -14,14 +14,13 @@ class User < ApplicationRecord
   with_options presence: true do
     validates :nickname
     validates :email, uniqueness: true, format: { with: /@/, message: '@を使用してください'}
-    validates :password, length: { in: 7..100 }, format: { with: VALID_PASSWORD_REGEX, message: '8文字以上に設定してください'}
+    validates :password, length: { in: 7..255 }, format: { with: VALID_PASSWORD_REGEX, message: '8文字以上に設定してください'}
     validates :password_confirmation
     validates :firstname, format: { with: VALID_ZENKAKU_REGEX, message: '全角文字を使用してください' } 
     validates :lastname, format: { with: VALID_ZENKAKU_REGEX, message: '全角文字を使用してください' } 
     validates :firstname_kana, format: { with: VALID_KATAKANA_REGEX, message: 'カタカナを使用してください' } 
     validates :lastname_kana, format: { with: VALID_KATAKANA_REGEX, message: 'カタカナを使用してください' } 
-    validates :birth_yyyy_id
-    validates :birth_mm_id
-    validates :birth_dd_id 
+    validates :birthday
+    
   end
 end

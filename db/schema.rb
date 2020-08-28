@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 2020_08_25_104354) do
 
   create_table "addresses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "postal_number", null: false
-    t.string "prefecture", null: false
+    t.integer "prefecture_id", null: false
     t.string "city", null: false
     t.string "brock_number", null: false
     t.string "building_name"
@@ -29,12 +29,12 @@ ActiveRecord::Schema.define(version: 2020_08_25_104354) do
     t.text "description", null: false
     t.string "image", null: false
     t.integer "price", null: false
-    t.integer "user_id"
-    t.string "category", null: false
-    t.string "status", null: false
-    t.string "delivery_fee", null: false
-    t.string "consignor", null: false
-    t.string "shipping_date", null: false
+    t.integer "user_id", null: false
+    t.integer "category_id", null: false
+    t.integer "status_id", null: false
+    t.integer "delivery_fee_id", null: false
+    t.integer "prefecture_id", null: false
+    t.integer "shipping_date_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -54,7 +54,7 @@ ActiveRecord::Schema.define(version: 2020_08_25_104354) do
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "nickname", null: false
     t.string "email", default: "", null: false
-    t.string "encrypted_password", null: false
+    t.string "encrypted_password", default: "", null: false
     t.string "firstname", null: false
     t.string "lastname", null: false
     t.string "firstname_kana", null: false
