@@ -7,9 +7,6 @@ class ItemsController < ApplicationController
 
   def new
     @item = Item.new
-    # if current_user == null
-    #   redirect_to ("/new/item")
-    # end
   end
   
   def create
