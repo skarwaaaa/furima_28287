@@ -6,7 +6,7 @@ class ItemsController < ApplicationController
     end
 
   def new
-    @item=Item.new
+    @item = Item.new
     # if current_user == null
     #   redirect_to ("/new/item")
     # end
