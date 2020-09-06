@@ -6,8 +6,7 @@ class ItemsController < ApplicationController
     end
 
   def new
-    @item = Item.new
-  end
+    end
   
   def create
     @item = Item.new(item_params)
@@ -21,6 +20,7 @@ class ItemsController < ApplicationController
   private
 
     def move_to_index
+      @item = Item.new
       unless user_signed_in?
         redirect_to action: :new
       end
